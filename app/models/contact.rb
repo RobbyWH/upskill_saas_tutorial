@@ -1,2 +1,2 @@
-class Contact < AcrtiveRecord:Base
+class Contact < ActiveRecord::Base
 end
