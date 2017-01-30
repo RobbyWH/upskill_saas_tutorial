@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 20170130075220) do
   end
 
   create_table "profiles", force: :cascade do |t|
+    t.integer "user_id"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "job_title"
+    t.string  "phone_number"
   end
 
   create_table "users", force: :cascade do |t|
