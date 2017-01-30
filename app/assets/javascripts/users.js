@@ -9,6 +9,7 @@ $(document).on('turbolinks:load', function(){
   
   //When user clicks form submit btn,
   submitBtn.click(function(event){
+  
     //prevent default submission behavior.
     event.preventDefault();
     submitBtn.val("Processing").prop('disabled', true);
@@ -60,7 +61,7 @@ $(document).on('turbolinks:load', function(){
   function stripeResponseHandler(status, response) {
     //Get the token from the response.
     var token = response.id;
-    
+
     //Inject the card token in a hidden field.
     theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
     
